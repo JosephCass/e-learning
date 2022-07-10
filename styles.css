@@ -1,0 +1,268 @@
+:root {
+  --navy: #13183f;
+}
+
+* {
+  margin: 0;
+  padding: none;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  max-width: 100%;
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+}
+
+.container {
+  height: auto;
+  /* background-image: linear-gradient(white, #f0f1ff); */
+  background-image: linear-gradient(white, #6e76e7);
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-columns: auto auto auto;
+  grid-template-areas:
+    "header"
+    "courses"
+    "footer";
+  justify-content: center;
+}
+
+.header {
+  grid-area: header;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.page-start {
+  width: 100%;
+  display: flex;
+  padding: 1.6rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand-name {
+  color: var(--navy);
+  font-size: 2.8rem;
+  line-height: 3.5rem;
+  font-weight: 800;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.btn-navy {
+  background-color: var(--navy);
+}
+
+.btn {
+  border-radius: 2.6rem;
+  border: none;
+  padding: 1rem 2.4rem;
+  color: white;
+  line-height: 2.8rem;
+  font-weight: 700;
+  font-size: 1.6rem;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.header-transition {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header-info {
+  /* border: 1px solid blue; */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.header-info h2 {
+  font-size: 4rem;
+  font-weight: 800;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  line-height: 5rem;
+  margin: 1.6rem;
+}
+
+.header-info p {
+  color: #83869a;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 2.6rem;
+  margin: 2.6rem;
+}
+
+.btn-pink {
+  background-image: linear-gradient(#ff6f48, #f02aa6);
+  margin-left: 1.6rem;
+}
+
+.image-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: none;
+  /* border: blue 1px solid; */
+  max-width: 100%;
+  width: 32.7rem;
+  height: 30.1rem;
+}
+
+.header-image {
+  width: 100%;
+  height: 100%;
+
+  /* border: blue 1px solid; */
+}
+
+.courses {
+  grid-area: courses;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(32.7rem, 1fr));
+  /* grid-template-rows: 1fr 1fr; */
+  row-gap: 5.6rem;
+  border: 1px blue solid;
+  justify-items: center;
+  column-gap: 0.5rem;
+  /* max-width: 111rem; */
+}
+
+.courses-header {
+  width: 34.3rem;
+  height: 12rem;
+  background-image: linear-gradient(#ff6f48, #f02aa6);
+  color: white;
+  padding: 2.8rem;
+  border-radius: 1rem;
+  /* margin: 1.6rem; */
+  font-size: 2.4rem;
+  line-height: 3.2rem;
+  font-weight: 800;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  margin-top: none;
+}
+
+.course-box {
+  position: relative;
+  width: 34.3rem;
+  height: 25.9rem;
+  background-color: white;
+  border-radius: 1rem;
+}
+
+.course-icon {
+  position: relative;
+  bottom: 2.4rem;
+  left: 2.8rem;
+}
+
+.course-title {
+  font-weight: 800;
+  color: #13183f;
+  font-size: 2rem;
+  line-height: 2.5rem;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  margin-left: 2.8rem;
+  margin-bottom: 1.6rem;
+}
+
+.course-description {
+  color: #83869a;
+  font-size: 1.6rem;
+  line-height: 2.6rem;
+  font-weight: 500;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  margin-left: 2.8rem;
+  margin-right: 2.9rem;
+  margin-bottom: 2.4rem;
+}
+
+.course-btn {
+  font-size: 1.8rem;
+  line-height: 2.8rem;
+  font-weight: 700;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  color: #f74780;
+  margin-left: 2.8rem;
+  margin-bottom: 3.2rem;
+}
+
+.courses div:last-child {
+  margin-bottom: 8rem;
+}
+
+.footer {
+  grid-area: footer;
+  height: 12rem;
+  display: flex;
+  background-color: #13183f;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer-name {
+  font-size: 2.8rem;
+  line-height: 3.5rem;
+  font-weight: 800;
+  font-family: "Plus Jakarta Sans", sans-serifs;
+  color: white;
+  margin-left: 1.6rem;
+}
+
+.footer-btn {
+  background: linear-gradient(#4851ff, #f02aa6);
+  margin-right: 1.6rem;
+}
+
+@media screen and (min-width: 768px) {
+  .header-transition {
+    flex-direction: row;
+    margin-bottom: 18.6rem;
+  }
+
+  .header-info {
+    width: 39.8rem;
+    height: 28.4rem;
+  }
+
+  .image-container {
+    position: relative;
+    width: 34rem;
+    /* height: 64rem; */
+  }
+
+  .header-image {
+    content: url(assets/image-hero-tablet@2x.png);
+    position: relative;
+    /* width: 64rem;
+    height: 64rem; */
+    overflow: hidden;
+  }
+
+  .courses-header {
+    height: 25.9rem;
+  }
+
+  /* 
+  Change Photo
+  Change Height Of Courses Heading
+  Change Header To Be Side by Side   
+  */
+}
+
+@media screen and (min-width: 960px) {
+}
+
+@media screen and (min-width: 1200px) {
+}
